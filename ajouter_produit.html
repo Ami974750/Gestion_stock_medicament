@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un produit</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f2f8f5;
+            color: #173b2b;
+        }
+
+        .container {
+            max-width: 430px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #16845b;
+            margin-bottom: 8px;
+        }
+
+        .intro {
+            text-align: center;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .carte {
+            background: white;
+            padding: 20px;
+            border-radius: 18px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 15px;
+            margin-bottom: 7px;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #d5e3dc;
+            border-radius: 12px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 15px;
+            border: none;
+            border-radius: 12px;
+            background: #16845b;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .retour {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #16845b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .info {
+            margin-top: 20px;
+            padding: 14px;
+            background: #eef8f3;
+            border-radius: 12px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>➕ Ajouter un produit</h1>
+
+    <p class="intro">
+        Enregistrer un nouveau produit
+    </p>
+
+    <div class="carte">
+
+        <form action="enregistrer_produit.php" method="POST">
+
+            <label for="nom">Nom du produit</label>
+
+            <input
+                type="text"
+                id="nom"
+                name="nom"
+                placeholder="Ex : Moringa"
+                required
+            >
+
+
+            <label for="categorie">Catégorie</label>
+
+            <input
+                type="text"
+                id="categorie"
+                name="categorie"
+                placeholder="Ex : Plantes"
+                required
+            >
+
+
+            <label for="prix_achat">
+                💰 Prix d'achat en gros
+            </label>
+
+            <input
+                type="number"
+                id="prix_achat"
+                name="prix_achat"
+                min="0"
+                step="0.01"
+                placeholder="Ex : 20000"
+                required
+            >
+
+
+            <label for="frais_transport">
+                🚚 Frais de transport
+            </label>
+
+            <input
+                type="number"
+                id="frais_transport"
+                name="frais_transport"
+                min="0"
+                step="0.01"
+                placeholder="Ex : 2000"
+                value="0"
+                required
+            >
+
+
+            <label for="prix_vente">
+                💵 Prix de vente d'un petit sac
+            </label>
+
+            <input
+                type="number"
+                id="prix_vente"
+                name="prix_vente"
+                min="0"
+                step="0.01"
+                placeholder="Ex : 500"
+                required
+            >
+
+
+            <label for="stock_gros">
+                📦 Stock en gros
+            </label>
+
+            <input
+                type="number"
+                id="stock_gros"
+                name="stock_gros"
+                min="0"
+                placeholder="Ex : 10"
+                value="0"
+                required
+            >
+
+
+            <label for="stock_unitaire">
+                🛍️ Stock unitaire
+            </label>
+
+            <input
+                type="number"
+                id="stock_unitaire"
+                name="stock_unitaire"
+                min="0"
+                placeholder="Ex : 100"
+                value="0"
+                required
+            >
+
+
+            <label for="seuil_alerte">
+                ⚠️ Seuil d'alerte du stock unitaire
+            </label>
+
+            <input
+                type="number"
+                id="seuil_alerte"
+                name="seuil_alerte"
+                min="0"
+                placeholder="Ex : 10"
+                value="0"
+                required
+            >
+
+
+            <div class="info">
+                💡 <strong>Important :</strong><br>
+                Le stock en gros correspond aux gros sacs encore fermés.
+                Le stock unitaire correspond aux petits sacs déjà préparés et prêts à être vendus.
+            </div>
+
+
+            <button type="submit">
+                ✅ Enregistrer le produit
+            </button>
+
+        </form>
+
+    </div>
+
+    <a href="index.php" class="retour">
+        ← Retour à l'accueil
+    </a>
+
+</div>
+
+</body>
+</html>

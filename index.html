@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion Stock</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5fdf9;
+            color: #222;
+        }
+
+        .container {
+            max-width: 430px;
+            margin: auto;
+            padding: 25px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #16845b;
+            margin-bottom: 30px;
+        }
+
+        .welcome {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .summary {
+            background-color: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 25px;
+        }
+
+        .summary h2 {
+            margin-top: 0;
+            color: #16845b;
+            font-size: 18px;
+        }
+
+        .summary p {
+            margin: 12px 0;
+            font-size: 16px;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        button {
+            border: none;
+            border-radius: 15px;
+            padding: 25px 10px;
+            background-color: #16845b;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .menu-button {
+            border: none;
+            border-radius: 15px;
+            padding: 25px 10px;
+            background-color: #16845b;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .menu-button:hover {
+            background-color: #116b49;
+        }
+
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            color: #16845b;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Gestion Stock</h1>
+
+        <div class="welcome">
+            Bienvenue Madame Diarrassouba 👋
+        </div>
+
+        <div class="summary">
+            <h2>Aujourd'hui</h2>
+
+            <p>💰 Ventes : <strong>14 000 FCFA</strong></p>
+            <p>📦 Produits en stock : <strong>3</strong></p>
+            <p>⚠️ Alertes stock : <strong>0</strong></p>
+        </div>
+
+        <div class="buttons">
+
+            <a href="stock.php" class="menu-button">
+                📦<br>Stock
+            </a>
+
+            <a href="vente.php" class="menu-button">
+                💰<br>Nouvelle vente
+            </a>
+
+            <a href="ajouter_produit.html" class="menu-button">
+                ➕<br>Ajouter un produit
+            </a>
+
+            <a href="resultats.php" class="menu-button">
+                📊<br>Résultats
+            </a>
+            <a href=""></a> 
+        </div>
+
+        <div class="footer">
+            Gestion simple de votre activité
+        </div>
+
+    </div>
+
+</body>
+</html>
